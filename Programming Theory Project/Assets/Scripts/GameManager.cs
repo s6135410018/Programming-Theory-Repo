@@ -71,7 +71,6 @@ public class GameManager : MonoBehaviour
             playerName = data.playerName;
         }
     }
-   
      public void ExitGame()
     {
         #if (UNITY_EDITOR)
@@ -80,4 +79,5 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         #endif
     }
+   
 }
