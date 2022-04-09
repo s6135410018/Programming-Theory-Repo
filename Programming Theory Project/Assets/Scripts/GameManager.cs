@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using System.IO;
+using UnityEditor;
 
 [System.Serializable]
 class SaveData
@@ -71,4 +72,12 @@ public class GameManager : MonoBehaviour
         }
     }
    
+     public void ExitGame()
+    {
+        #if (UNITY_EDITOR)
+            EditorApplication.ExitPlaymode();
+        #else
+            Application.Quit();
+        #endif
+    }
 }
